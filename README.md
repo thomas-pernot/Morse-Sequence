@@ -29,7 +29,7 @@ python -m pip install meson-python ninja pybind11 numpy
 Then, build and install the package
 
 ```bash
-git clone --recurse-submodules https://github.com/RussianDoggo21/Morse_Sequence.git
+git clone --recurse-submodules https://github.com/thomas-pernot/Morse-Sequence.git
 cd Morse-Sequence
 python -m pip install --no-build-isolation --editable .
 ```
