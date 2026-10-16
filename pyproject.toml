@@ -3,7 +3,7 @@ requires = ["meson-python", "pybind11"]
 build-backend = "mesonpy"
 
 [project]
-name = "morse-sequence"
+name = "Morse-Sequence"
 version = "0.1.5"
 description = "Python interface to compute Morse Sequences and Morse Frames in C++"
 authors = [
@@ -15,8 +15,8 @@ readme = "README.md"
 requires-python = ">=3.6"
 
 [project.urls]
-"Homepage" = "https://github.com/thomas-pernot/morse-sequence"
-"Repository" = "https://github.com/thomas-pernot/morse-sequence.git"
+"Homepage" = "https://github.com/thomas-pernot/Morse-Sequence"
+"Repository" = "https://github.com/thomas-pernot/Morse-Sequence.git"
 
 
 

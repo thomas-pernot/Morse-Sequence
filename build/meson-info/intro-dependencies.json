@@ -2,7 +2,7 @@
   {
     "name": "pybind11",
     "type": "pkgconfig",
-    "version": "2.13.6",
+    "version": "3.0.1",
     "compile_args": [
       "-I/include"
     ],

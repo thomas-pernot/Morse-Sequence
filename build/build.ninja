@@ -113,6 +113,12 @@ build meson-internal__dist: CUSTOM_COMMAND PHONY
 
 # Suffix
 
+build scan-build: phony meson-internal__scan-build
+
+build meson-internal__scan-build: CUSTOM_COMMAND PHONY
+ COMMAND = '/home/kali/Téléchargements/Morse/venv/bin/meson' --internal scanbuild '/home/kali/Téléchargements/Morse' '/home/kali/Téléchargements/Morse/build' subprojects '/home/kali/Téléchargements/Morse/venv/bin/meson' setup
+ pool = console
+
 build uninstall: phony meson-internal__uninstall
 
 build meson-internal__uninstall: CUSTOM_COMMAND PHONY

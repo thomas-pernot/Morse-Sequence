@@ -29,8 +29,8 @@
         "H"
       ],
       "default_suffix": "cpp",
-      "version": "14.2.0",
-      "full_version": "c++ (Debian 14.2.0-19) 14.2.0",
+      "version": "15.2.0",
+      "full_version": "c++ (Debian 15.2.0-17) 15.2.0",
       "linker_id": "ld.bfd"
     }
   },
@@ -64,8 +64,8 @@
         "H"
       ],
       "default_suffix": "cpp",
-      "version": "14.2.0",
-      "full_version": "c++ (Debian 14.2.0-19) 14.2.0",
+      "version": "15.2.0",
+      "full_version": "c++ (Debian 15.2.0-17) 15.2.0",
       "linker_id": "ld.bfd"
     }
   }
