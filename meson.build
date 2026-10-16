@@ -11,7 +11,17 @@ endif
 add_project_arguments('-funroll-loops', language : 'cpp')
 
 py = import('python').find_installation(pure : false)
-pybind11_dep = dependency('pybind11', required : true)
+
+# pybind11 : prendre les en-têtes du paquet Python pybind11 vu par l'interpréteur de
+# compilation (celui épinglé dans pyproject.toml), pas une copie du système.
+# dependency('pybind11') cherche aussi via pkg-config/CMake et peut trouver une autre
+# version, dont l'interface (ABI) ne correspond pas à celle de simplextree.
+pybind11_inc = run_command(py, '-c', 'import pybind11; print(pybind11.get_include())',
+                           check : true).stdout().strip()
+pybind11_dep = declare_dependency(
+  include_directories : include_directories(pybind11_inc, is_system : true)
+)
+
 boost_dep = dependency('boost', required : true)   # seulement des en-têtes (dynamic_bitset)
 
 simplextree_inc = include_directories('src/simplextree-py/include')

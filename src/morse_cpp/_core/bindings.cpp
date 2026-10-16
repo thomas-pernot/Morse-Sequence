@@ -465,7 +465,7 @@ PYBIND11_MODULE(_core, m) {
     m.doc() = "Python interface for MorseSequence";
 
     py::class_<MorseSequence>(m, "MorseSequence")
-        .def(py::init<const SimplexTree&>())
+        .def(py::init<const SimplexTree&>(), py::keep_alive<1, 2>())
 
         // Boundary methods
         .def("boundary", static_cast<boundary_fn_1>(&MorseSequence::boundary))
