@@ -2,7 +2,7 @@
 # In both pure python and hybrid code
 
 from simplextree import SimplexTree
-from morse import MorseSequence
+from morse_sequence import MorseSequence
 
 from src.python.max import Max
 from src.python.min import Min
@@ -14,7 +14,7 @@ import time
 import csv
 import os
 
-CSV_FILE = "/home/kali/Téléchargements/Morse-Sequence/tests/graphs/timing_results_python.csv"
+CSV_FILE = os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "graphs", "timing_results_python_new.csv")
 
 def write_timing_result(size, operation, language, time_seconds):
     header = ["size", "operation", "language", "time_seconds"]
@@ -82,7 +82,7 @@ def timer_comparison():
         write_timing_result(k, "decreasing", "python", time_dec2)
 
         start_dec = time.time()
-        ms_dec, n_crit_dec = ms.decreasing(st)
+        ms_dec, n_crit_dec = ms.decreasing()
         end_dec = time.time()
         time_dec = end_dec - start_dec
         print(f"Decreasing C++/Python: {time_dec:.6f} seconds")
@@ -99,7 +99,7 @@ def timer_comparison():
         write_timing_result(k, "increasing", "python", time_crois2)
 
         start_crois = time.time()
-        ms_crois, n_crit_crois = ms.increasing(st)
+        ms_crois, n_crit_crois = ms.increasing()
         end_crois = time.time()
         time_crois = end_crois - start_crois
         print(f"Increasing C++/Python: {time_crois:.6f} seconds")
