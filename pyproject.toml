@@ -1,10 +1,10 @@
-[build-system] 
-requires = ["meson-python", "pybind11"] 
+[build-system]
+requires = ["meson-python>=0.15", "pybind11>=2.13,<3"]
 build-backend = "mesonpy"
 
 [project]
-name = "Morse-Sequence"
-version = "0.1.5"
+name = "morse-sequence"
+dynamic = ["version"]   # la version vient de meson.build
 description = "Python interface to compute Morse Sequences and Morse Frames in C++"
 authors = [
     { name = "Thomas Pernot" }
@@ -12,11 +12,8 @@ authors = [
 dependencies = ["simplextree>=0.1.0"]
 license = { text = "MIT" }
 readme = "README.md"
-requires-python = ">=3.6"
+requires-python = ">=3.9"
 
 [project.urls]
 "Homepage" = "https://github.com/thomas-pernot/Morse-Sequence"
 "Repository" = "https://github.com/thomas-pernot/Morse-Sequence.git"
-
-
-
