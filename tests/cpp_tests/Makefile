@@ -2,7 +2,7 @@
 #  Global compiler options
 INCLUDES := -I ../../external/ -I ../../src/morse_cpp/_core -I ../../src/simplextree-py/include/
 CXX      := g++
-CXXFLAGS := -std=c++20 -O3 -march=native -flto -funroll-loops -Wall $(INCLUDES)
+CXXFLAGS := -std=c++20 -O3 -march=native -funroll-loops -Wall $(INCLUDES)
 
 LIBS     := -lpython3.13
 PYBIND11_FLAGS := $(shell python3 -m pybind11 --includes)
